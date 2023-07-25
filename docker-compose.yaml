@@ -1,0 +1,12 @@
+---
+version: '3.6'
+services:
+  rest-api:
+    image: 'hello-world-rest-api:0.0.1-SNAPSHOT'
+    ports:
+      - '8080:8080'
+    networks:
+      - spring-network
+networks:
+  spring-network:
+    driver: bridge
